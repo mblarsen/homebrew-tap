@@ -8,7 +8,7 @@ cask "env-lease" do
   name "env-lease"
   desc "A CLI for managing temporary, leased secrets in environment files."
   homepage "https://github.com/mblarsen/env-lease"
-  version "0.1.8"
+  version "0.1.9"
 
   livecheck do
     skip "Auto-generated on release."
@@ -19,22 +19,22 @@ cask "env-lease" do
   on_macos do
     on_intel do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_darwin_amd64.tar.gz"
-      sha256 "fad2492fc9eac69b39618dae5c1a1642d9bf889effee2202ecd3402a7effd2cf"
+      sha256 "8a7cbf803fb340c64db98f6a260be098d5d95c497736ab1df4f534493bf5622b"
     end
     on_arm do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_darwin_arm64.tar.gz"
-      sha256 "122426fe1d8ecaf44ef3182082ba2e6e978eb551045c034b05e003fab46ffd7c"
+      sha256 "d19da8a73397d16e3913b259ae16e0ddf0c5b6eeaee4f3ca0dd7d8d8b214e10a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_linux_amd64.tar.gz"
-      sha256 "d36442add4147450fa453cbc0479d40bec08af508a65d1d7394b59b552832cc6"
+      sha256 "28a3a7775c68689f02911ec518d96147e2fb23c6ddac95887717411490c7c1ad"
     end
     on_arm do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_linux_arm64.tar.gz"
-      sha256 "97ba9b18623b62f0ea25de36df21c78389342ccb46a52e52a13fcb5f2a4fe6f7"
+      sha256 "33ee5dbffd661024442b5565feb5fe167f0fc38a090a9f85a025bda66172ae68"
     end
   end
 
@@ -42,6 +42,7 @@ cask "env-lease" do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/env-lease"]
     end
+    system_command "#{staged_path}/env-lease", args: ["daemon", "reload"]
   end
 
   # No zap stanza required
