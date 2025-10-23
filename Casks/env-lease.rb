@@ -8,7 +8,7 @@ cask "env-lease" do
   name "env-lease"
   desc "A CLI for managing temporary, leased secrets in environment files."
   homepage "https://github.com/mblarsen/env-lease"
-  version "0.1.35"
+  version "0.1.36"
 
   livecheck do
     skip "Auto-generated on release."
@@ -19,22 +19,22 @@ cask "env-lease" do
   on_macos do
     on_intel do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_darwin_amd64.tar.gz"
-      sha256 "9a64ce58e7aa51a4c6c070316e047bec80a01ee41ceaaae67db790d535f2cb91"
+      sha256 "50bc26709ab768b2a7d73add62a210cb8c1d61035f67f7f827b1781f0c25857a"
     end
     on_arm do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_darwin_arm64.tar.gz"
-      sha256 "99c9f9ef28204fb686292c18b9161b4f53f97037be6819e9ca7e2a3004cc88b6"
+      sha256 "47616bbbdc45a9bb4454755f687582a34ea4b59d7915e869dde0142af1b03db0"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_linux_amd64.tar.gz"
-      sha256 "48fbc67e447b56afe7a0119f6483902c1b0115938c96dc297edbbde1259e6acc"
+      sha256 "e6e6e150decd60c068c70262f04f6daaf798d0ddcac2b6316b56fc82259f3d0a"
     end
     on_arm do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_linux_arm64.tar.gz"
-      sha256 "dac79b5eba6d65a3c1aa9e0f436dff0c2e5c519bf7d29c9d0fd49e6ee9fc761d"
+      sha256 "fa450e5d4256fd8f704f3798037de13b7ad1989204403f6eed8834b25459538b"
     end
   end
 
