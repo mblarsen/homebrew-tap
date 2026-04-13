@@ -5,27 +5,27 @@ cask "env-lease" do
     keep_alive true
   end
 
-  version "0.1.37"
+  version "0.1.38"
 
   on_macos do
     on_intel do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_darwin_amd64.tar.gz"
-      sha256 "90857fe723d22b169fccb8e1517a47740f978af891e7d82d7506d8975e59db0e"
+      sha256 "69cf1d04c9265ad4998f2f9274f78e818e953678e45e1ce35c6060c80ef3ce40"
     end
     on_arm do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_darwin_arm64.tar.gz"
-      sha256 "7ff69b9e37ab5a0553ce007fdc7bceb2211d6803057689c3b484bee88bc4af62"
+      sha256 "3c2aaf2092571eec74444f33ef15b23d745c4a6c67526f1fde3b7fbedd625ea2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_linux_amd64.tar.gz"
-      sha256 "20f5ff00aaf58b05e7247c36a547e3e277aced973f30613cba304871cc56f5cd"
+      sha256 "e08ef200a03988f13d8a0b8526cee7b3fb18696f270a21c3e446a59452c29ba8"
     end
     on_arm do
       url "https://github.com/mblarsen/env-lease/releases/download/v#{version}/env-lease_linux_arm64.tar.gz"
-      sha256 "224afef0d05fe0c3a51fb6f617c2953960598973911beb9679bb3c50d4cbddd6"
+      sha256 "3e45f434b12cf210d9d0f152211a3623ccf6044bc830c361d76aafd553e6878f"
     end
   end
 
